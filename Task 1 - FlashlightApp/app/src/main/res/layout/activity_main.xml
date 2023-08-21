@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint="@color/white"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <!-- The ActionBar (Toolbar) -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/design_default_color_primary"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        android:title="@string/flashlight_app"
+        app:titleTextColor="@color/white"/>
+
+
+    <!-- Center the heading "Flashlight" -->
+    <TextView
+        android:id="@+id/flashlightHeading"
+        android:layout_width="239dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="false"
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="280dp"
+        android:text="@string/flashlight"
+        android:textColor="#00A36C"
+        android:textSize="50sp"
+        android:textStyle="italic|bold"
+        tools:ignore="TextSizeCheck" />
+
+    <!-- Add a single horizontal space line below the heading -->
+    <View
+        android:layout_width="370dp"
+        android:layout_height="1dp"
+        android:layout_below="@id/flashlightHeading"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="57dp"
+        android:layout_marginTop="33dp"
+        android:layout_marginEnd="53dp"
+        android:background="@android:color/darker_gray"
+        android:padding="16dp" />
+
+    <!-- Center the ToggleButton below the space line -->
+    <ToggleButton
+        android:id="@+id/flashlightToggle"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/flashlightHeading"
+        android:layout_alignStart="@+id/flashlightHeading"
+        android:layout_alignEnd="@+id/flashlightHeading"
+        android:layout_marginStart="39dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="50dp"
+        android:padding="16dp"
+        android:textOff="@string/off"
+        android:textOn="@string/on"
+        android:textStyle="bold"
+        tools:ignore="MissingConstraints" />
+
+</RelativeLayout>
